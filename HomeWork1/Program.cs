@@ -1,6 +1,6 @@
 ﻿/*
     Vladimir Raevsky
-    Урок 1, задание 1 «Анкета», включая пункты а, б, в
+    Урок 1, задание 1 «Анкета», включая пункты а, б, в + try_catch
 
 */
 
@@ -31,29 +31,40 @@ namespace Task1
 
         static void Main(string[] args)
         {
+            try
+            {
+                Print();
 
-            Print();
+                Console.WriteLine("Enter your name: ");
+                string name = Convert.ToString(Console.ReadLine());
 
-            Console.WriteLine("Enter your name: ");
-            string name = Convert.ToString(Console.ReadLine());
+                Console.WriteLine("Enter your last name: ");
+                string surname = Convert.ToString(Console.ReadLine());
 
-            Console.WriteLine("Enter your last name: ");
-            string surname = Convert.ToString(Console.ReadLine());
+            
+                Console.WriteLine("Enter your age: ");
+                int age = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter your age: ");
-            int age = int.Parse(Console.ReadLine());
+                Console.WriteLine("Enter your height: ");
+                double height = Double.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter your height: ");
-            double height = Double.Parse(Console.ReadLine());
+                Console.WriteLine("Enter your weight: ");
+                double weight = Double.Parse(Console.ReadLine());
+            
+            
 
-            Console.WriteLine("Enter your weight: ");
-            double weight = Double.Parse(Console.ReadLine());
 
-            Console.WriteLine("\nYour name is " + name + " " + surname + "\n" + "You are " + age + " years old\n" + "Your height is " + height + " centimeters\n" + "Your weight is " + weight + " kilos");
-            Console.WriteLine("\nYour name is {0} {1} \nYou are {2} years old \nYour height is {3} centimeters \nYour weight is {4} kilos", name, surname, age, height, weight);
-            Console.WriteLine($"\nYour name is {name} {surname} \nYou are {age} years old \nYour height is {height} centimeters \nYour weight is {weight} kilos");
+                Console.WriteLine("\nYour name is " + name + " " + surname + "\n" + "You are " + age + " years old\n" + "Your height is " + height + " centimeters\n" + "Your weight is " + weight + " kilos");
+                Console.WriteLine("\nYour name is {0} {1} \nYou are {2} years old \nYour height is {3} centimeters \nYour weight is {4} kilos", name, surname, age, height, weight);
+                Console.WriteLine($"\nYour name is {name} {surname} \nYou are {age} years old \nYour height is {height} centimeters \nYour weight is {weight} kilos");
 
-            Pause();
+                Pause();
+
+            } catch (Exception)
+            {
+                Console.WriteLine("You have entered the wrong value!");
+                Pause();
+            }
         }
     }
 }
