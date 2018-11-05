@@ -22,10 +22,10 @@ namespace Task2
         static void Main(string[] args)
         {
             Console.WriteLine("Enter your height: ");
-            double height = Convert.ToDouble(Console.ReadLine());
+            double height = Double.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter your weight: ");
-            double weight = Convert.ToDouble(Console.ReadLine());
+            double weight = Double.Parse(Console.ReadLine());
             double I = weight / (height * height);
             Console.WriteLine($"Your BMI is: {I:F5}");
 

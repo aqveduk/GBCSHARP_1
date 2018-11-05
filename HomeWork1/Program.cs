@@ -41,13 +41,13 @@ namespace Task1
             string surname = Convert.ToString(Console.ReadLine());
 
             Console.WriteLine("Enter your age: ");
-            int age = Convert.ToInt16(Console.ReadLine());
+            int age = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter your height: ");
-            double height = Convert.ToDouble(Console.ReadLine());
+            double height = Double.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter your weight: ");
-            double weight = Convert.ToDouble(Console.ReadLine());
+            double weight = Double.Parse(Console.ReadLine());
 
             Console.WriteLine("\nYour name is " + name + " " + surname + "\n" + "You are " + age + " years old\n" + "Your height is " + height + " centimeters\n" + "Your weight is " + weight + " kilos");
             Console.WriteLine("\nYour name is {0} {1} \nYou are {2} years old \nYour height is {3} centimeters \nYour weight is {4} kilos", name, surname, age, height, weight);
