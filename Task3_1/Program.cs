@@ -17,7 +17,7 @@ namespace Task3_1
 
         static void Pause(string message = "Press any key to exit")
         {
-            Console.WriteLine(message);
+            Console.Write(message);
             Console.ReadKey();
         }
 
