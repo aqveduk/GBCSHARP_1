@@ -1,6 +1,6 @@
 ﻿/*
     Vladimir Raevsky
-    Урок 1, задание 2 «ИМТ»
+    Урок 1, задание 2 «ИМТ» + try_catch и throw new exception
 */
 
 using System;
@@ -21,16 +21,33 @@ namespace Task2
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter your height: ");
-            double height = Double.Parse(Console.ReadLine());
+            try
+            {
 
-            Console.WriteLine("Enter your weight: ");
-            double weight = Double.Parse(Console.ReadLine());
-            double I = weight / (height * height);
-            Console.WriteLine($"Your BMI is: {I:F5}");
+                Console.WriteLine("Enter your height: ");
+                double height = Double.Parse(Console.ReadLine());
 
-            Pause();
+                if (height == 0)
+                    throw new DivideByZeroException();  //Выбрасывает ошибку в catch, если height == 0
 
+                Console.WriteLine("Enter your weight: ");
+                double weight = Double.Parse(Console.ReadLine());
+                double I = weight / (height * height);
+                Console.WriteLine($"Your BMI is: {I:F5}");
+
+                Pause();
+
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Divided by zero!");
+                Pause();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("You have entered the wrong value!");
+                Pause();
+            }
 
 
         }
