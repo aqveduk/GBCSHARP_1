@@ -24,14 +24,14 @@ namespace Task3
         static void Main(string[] args)
         {
             Console.WriteLine("Enter the value for the FIRST point. Enter X:");
-            double x1 = Convert.ToDouble(Console.ReadLine());
+            double x1 = Double.Parse(Console.ReadLine());
             Console.WriteLine("Enter Y:");
-            double y1 = Convert.ToDouble(Console.ReadLine());
+            double y1 = Double.Parse(Console.ReadLine());
 
             Console.WriteLine("\nEnter the value for the SECOND point. Enter X:");
-            double x2 = Convert.ToDouble(Console.ReadLine());
+            double x2 = Double.Parse(Console.ReadLine());
             Console.WriteLine("Enter Y:");
-            double y2 = Convert.ToDouble(Console.ReadLine());
+            double y2 = Double.Parse(Console.ReadLine());
 
             double r = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
             Console.WriteLine("The distance between two points is: {0:F2}", r);
