@@ -1,7 +1,7 @@
 ﻿/*
     Vladimir Raevsky
     Урок 1, задание 1 «Анкета», включая пункты а, б, в
-    Test new hey
+
 */
 
 using System;
